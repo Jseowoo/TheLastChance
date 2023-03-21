@@ -28,6 +28,39 @@ First ADD Dependencies
 ![image](https://user-images.githubusercontent.com/128284659/226656549-1d03f895-4f7c-4e0e-9d10-d3e67a1b1c29.png)
 ![image](https://user-images.githubusercontent.com/128284659/226657739-40b174a0-689d-4958-b9a6-2ffb624732d8.png)
 
-result
-![image](https://user-images.githubusercontent.com/128284659/226658071-dc71b78c-0538-45a7-b2ff-6c4dbebd4399.png)
+success result
+```
+{
+    "documents": [
+        {
+            "title": "디아블로4 시작 전에 알아보는 디아블로 스토리 및 세계관 #1 ~ 프롤로그",
+            "contents": "To be countinue - 참고자료 https://diablo.fandom.com/ https://store.steampowered.com/app/8930/Sid_Meiers_Civilization_V/ https://www.beastsofwar.com/board-games/mage-wars-reveals-academy-forcemaster-expansion/ https://namu.wiki/w/%<b>EB</b>%<b>94%</b><b>94%</b><b>EC</b>%<b>95%</b><b>84%</b><b>EB</b>%<b>B</b><b>8%</b><b>94%</b><b>EB</b>%<b>A</b><b>1%</b>9C%20%<b>EC</b>%8B%9C%<b>EB</b>%A6%AC%<b>EC</b>%A6%88",
+            "url": "https://blog.naver.com/z00o0o/223046784117",
+            "blogname": "라이트 즐겜러 직장인의 게임 이야기",
+            "thumbnail": "",
+            "datetime": "2023-03-17T10:00:00.000+09:00"
+        }
+    ],
+    "meta": {
+        "total_count": 13839,
+        "is_end": false,
+        "favorite_keywords": [
+            {
+                "keyword": "디아블로",
+                "count": 2
+            },
+            {
+                "keyword": "디아블로2",
+                "count": 1
+            }
+        ],
+        "pageable_count": 799,
+        "pageinfo": {
+            "sort_type": "accuracy",
+            "total_page": 799,
+            "current_page": 1
+        }
+    }
+}
+```
 
