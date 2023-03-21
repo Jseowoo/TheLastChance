@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class RequestBlogSearchDTO {
+public class RequestNaverSearchDTO {
 
     @NotBlank(message = "query parameter required")
     private String query;

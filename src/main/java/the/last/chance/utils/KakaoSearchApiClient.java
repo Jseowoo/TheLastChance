@@ -2,8 +2,12 @@ package the.last.chance.utils;
 
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.http.*;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.HttpServerErrorException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 import the.last.chance.dto.ResponseKakaoSearchDTO;
@@ -34,18 +38,9 @@ public class KakaoSearchApiClient {
 
         HttpEntity<?> entity = new HttpEntity<>(headers);
 
-        try {
-            ResponseEntity<ResponseKakaoSearchDTO> responseEntity =
-                    restTemplate.exchange(builder.toUriString(), HttpMethod.GET, entity, ResponseKakaoSearchDTO.class);
-
-            return responseEntity.getBody();
-        } catch (Exception e) {
-
-            System.out.println("여기서 네이버?");
-
-
-            return null;
-        }
+        ResponseEntity<ResponseKakaoSearchDTO> responseEntity =
+                restTemplate.exchange(builder.toUriString(), HttpMethod.GET, entity, ResponseKakaoSearchDTO.class);
+        return responseEntity.getBody();
 
     }
 

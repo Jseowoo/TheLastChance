@@ -1,14 +1,11 @@
 package the.last.chance.blog;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import the.last.chance.dto.FavoriteKeywordDTO;
-import the.last.chance.dto.RequestBlogSearchDTO;
 import the.last.chance.dto.ResponseKakaoSearchDTO;
 import the.last.chance.entity.KeywordCountEntity;
 import the.last.chance.repository.KeywordCountRepository;

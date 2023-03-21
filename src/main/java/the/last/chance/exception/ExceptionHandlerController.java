@@ -3,6 +3,7 @@ package the.last.chance.exception;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.client.HttpClientErrorException;
@@ -20,7 +21,7 @@ public class ExceptionHandlerController {
         this.objectMapper = objectMapper;
     }
 
-    @ExceptionHandler(IllegalArgumentException.class)
+    @ExceptionHandler(MethodArgumentNotValidException.class)
     public ResponseEntity<Object> handleIllegalArgumentException(IllegalArgumentException ex) {
         Map<String, Object> response = new HashMap<>();
         response.put("errorType", "MissingParameter");
@@ -36,9 +37,9 @@ public class ExceptionHandlerController {
         return new ResponseEntity<>(response, HttpStatus.BAD_REQUEST);
     }
 
-//    @ExceptionHandler(HttpClientErrorException.class)
-//    public ResponseEntity<Map<String, String>> handleHttpClientErrorException(HttpClientErrorException ex) throws IOException {
-//        return ResponseEntity.badRequest().body(objectMapper.readValue(ex.getResponseBodyAsString(), Map.class));
-//    }
+    @ExceptionHandler(HttpClientErrorException.class)
+    public ResponseEntity<Map<String, String>> handleHttpClientErrorException(HttpClientErrorException ex) throws IOException {
+        return ResponseEntity.badRequest().body(objectMapper.readValue(ex.getResponseBodyAsString(), Map.class));
+    }
 
 }
