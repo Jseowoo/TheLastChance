@@ -3,6 +3,9 @@
 [Version Info] \
 JDK 17.0.6 corretto / Spring 6.0.6 / SpringBoot 3.0.4 / H2 database 2.1.214
 
+[Executable jar] 다운로드 링크(구글 드라이브 42.1MB)
+https://drive.google.com/file/d/1kqT9N-N-CyDfw2DtuZTpFF1NuznskAW6/view?usp=sharing
+
 First ADD Dependencies
  - Spring Data JPA
  - H2 Database
