@@ -7,6 +7,7 @@
 #1 https://drive.google.com/file/d/1kqT9N-N-CyDfw2DtuZTpFF1NuznskAW6/view?usp=sharing \
 #2 http://naver.me/GMvGyntx \
 *구글 드라이브가 느리면 네이버 클라우드 링크를 이용해 주세요.
+제출한 명세서 : [블로그 검색 API.pdf](https://github.com/Jseowoo/TheLastChance/files/11038630/API.pdf)
 
 [jar 실행 명령어]
 1. 커맨드 창을 열어 jar가 있는 디렉토리로 이동
@@ -36,5 +37,3 @@ First ADD Dependencies
 - 앞으로는 이런 사이드 코딩을 더욱 자주 하면서 지속적인 성장의 양분으로 삼을 계획이다.
  
 
-
-[블로그 검색 API.pdf](https://github.com/Jseowoo/TheLastChance/files/11038630/API.pdf)
