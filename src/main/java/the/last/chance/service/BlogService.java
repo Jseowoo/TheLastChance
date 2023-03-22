@@ -1,14 +1,11 @@
 package the.last.chance.service;
 
-import jdk.jshell.spi.ExecutionControl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.HttpStatusCode;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.client.HttpServerErrorException;
-import org.springframework.web.server.ResponseStatusException;
 import the.last.chance.dto.*;
 import the.last.chance.entity.KeywordCountEntity;
 import the.last.chance.repository.KeywordCountRepository;
@@ -56,30 +53,7 @@ public class BlogService {
             // ex) Util.getRemoteInfo(); ...
             if(dto.getSearch()) saveSearchKeyword(dto.getQuery(), "ko", "127.0.0.1");
 
-//            List<ResponseKakaoSearchDTO.Document> documents = responseKakaoSearchDTO.getDocuments();
             result = this.procBlogSearchInfo(responseKakaoSearchDTO, responseKakaoSearchDTO.getMeta().getTotalCount(), responseKakaoSearchDTO.getMeta().getPageableCount(), dto.getSize(), dto.getPage(), dto.getSort());
-
-//            searchList.put("documents", documents);
-//
-//            Map<String, Object> pageInfo = Map.of(
-//                "current_page", dto.getPage(),
-//                "total_page", (responseKakaoSearchDTO.getMeta().getPageableCount() % dto.getSize()) == 0 ?
-//                        (responseKakaoSearchDTO.getMeta().getPageableCount() / dto.getSize()) :
-//                        (responseKakaoSearchDTO.getMeta().getPageableCount() / dto.getSize()) + 1,
-//                "sort_type", dto.getSort()
-//            );
-//
-//            List<FavoriteKeywordDTO> favoriteKeywordList = this.getFavoriteKeyword();
-//
-//            Map<String, Object> meta = Map.of(
-//                "total_count", responseKakaoSearchDTO.getMeta().getTotalCount(),
-//                "pageable_count", responseKakaoSearchDTO.getMeta().getPageableCount(),
-//                "is_end", responseKakaoSearchDTO.getMeta().isEnd(),
-//                "pageinfo", pageInfo,
-//                "favorite_keywords", favoriteKeywordList
-//            );
-//
-//            searchList.put("meta", meta);
 
             return result;
 
@@ -124,7 +98,6 @@ public class BlogService {
 
     private Map<String, Object> procBlogSearchInfo(Object dto, Integer totalCount, Integer pageableCount, Integer size, Integer currentPage, String sortType) {
         Map<String, Object> result = new HashMap<>();
-
 
         if(dto instanceof ResponseKakaoSearchDTO) {
             result.put("documents", ((ResponseKakaoSearchDTO) dto).getDocuments());

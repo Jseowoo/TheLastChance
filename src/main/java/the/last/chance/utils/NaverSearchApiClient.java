@@ -43,10 +43,6 @@ public class NaverSearchApiClient {
         } catch (IOException e) {
             throw new RuntimeException("데이터 변환 실패", e);
         }
-
-
-
-
     }
 
     private static String get(String apiUrl, Map<String, String> requestHeaders){
