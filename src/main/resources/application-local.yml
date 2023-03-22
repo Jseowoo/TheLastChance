@@ -1,0 +1,38 @@
+h2:
+  console:
+    enabled: true
+    path: /h2-console
+
+  datasource:
+    url: jdbc:h2:mem:chance;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+
+rest:
+  api:
+    key:
+      kakao: fe3aa4f43dc676e2470a5f4fd5c06878
+      naver:
+        client-id: 1bHDFZgX9riKTz4l9kMh
+        client-secret: UvwGt8W5nj
+
+url:
+  kakao:
+    search:
+      blog: https://dapi.kakao.com/v2/search/blog
+  naver:
+    search:
+      blog: https://openapi.naver.com/v1/search/blog
+
+kakao:
+  api:
+    enable: true

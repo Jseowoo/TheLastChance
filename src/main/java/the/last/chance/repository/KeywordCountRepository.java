@@ -12,8 +12,6 @@ import java.util.List;
 @Repository
 public interface KeywordCountRepository extends JpaRepository<KeywordCountEntity, Long> {
 
-    KeywordCountEntity findByKeyword(String keyword);
-
     @Query("SELECT k.keyword, COUNT(k) FROM KeywordCountEntity k GROUP BY k.keyword ORDER BY COUNT(k) DESC LIMIT 10")
     List<Object[]> countTop10KeywordGroupByKeywordOrderByCountDesc();
 

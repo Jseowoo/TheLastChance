@@ -90,6 +90,6 @@ public class BlogSearchTest {
     public void favoriteKeywordList() {
         List<FavoriteKeywordDTO> list = blogService.getFavoriteKeyword();
 
-
+        assertNotNull(list);
     }
 }

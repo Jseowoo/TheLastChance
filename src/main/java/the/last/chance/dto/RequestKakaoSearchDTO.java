@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class RequestKakaoSearchDTO {
 
     @NotBlank(message = "query parameter required")

@@ -11,21 +11,24 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
 public class RequestNaverSearchDTO {
 
     @NotBlank(message = "query parameter required")
     private String query;
 
     @Min(value = 1, message = "size is less than min")
-    @Max(value = 50, message = "size is more than max")
-    private Integer page = 1, size = 10;
+    @Max(value = 1000, message = "size is more than max")
+    private Integer start = 1;
+
+    @Min(value = 1, message = "size is less than min")
+    @Max(value = 100, message = "size is more than max")
+    private Integer display = 10;
 
     private Boolean search = true;
 
-    private String sort = "accuracy";
+    private String sort = "sim";
 
     public void setSort(String sort) {
-        this.sort = !(sort.equals("accuracy") || sort.equals("recency")) ? "accuracy" : "recency";
+        this.sort = !(sort.equals("sim") || sort.equals("date")) ? "sim" : "date";
     }
 }
