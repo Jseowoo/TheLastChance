@@ -6,6 +6,10 @@ JDK 17.0.6 corretto / Spring 6.0.6 / SpringBoot 3.0.4 / H2 database 2.1.214
 [Executable jar] 다운로드 링크(구글 드라이브 42.1MB)
 https://drive.google.com/file/d/1kqT9N-N-CyDfw2DtuZTpFF1NuznskAW6/view?usp=sharing
 
+[jar 실행 명령어]
+1. 커맨드 창을 열어 jar가 있는 디렉토리로 이동
+2. java -jar ./chance-0.0.1-SNAPSHOT.jar --spring.profiles.active=local 입력 (JDK 17 필요)
+
 First ADD Dependencies
  - Spring Data JPA
  - H2 Database
