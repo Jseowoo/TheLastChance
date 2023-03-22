@@ -17,7 +17,6 @@ First ADD Dependencies
  - H2 Database
  - Spring Boot DevTools
  - Lombok
- - MyBatis Framework
 
 # 이슈(였던) 사항
 - SDK 최신버전 사용 시, UTF-8 깨짐 현상 발생 (19버전) -> 17버전으로 다운그레이드
